@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-game="leapline">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Leapline: Cube Jumper</title>
+<meta name="description" content="Leapline is a one-thumb arcade game: tap to hop, hold to fly. Free, no ads, no purchases, works offline. Coming soon to the App Store.">
+<meta name="theme-color" content="#2a2d48">
+<meta property="og:title" content="Leapline: Cube Jumper">
+<meta property="og:description" content="Leapline is a one-thumb arcade game: tap to hop, hold to fly. Free, no ads, no purchases, works offline. Coming soon to the App Store.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../assets/leapline/favicon.svg">
+<link rel="preload" href="../assets/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/site.css">
+<script>try{var t=localStorage.getItem('arcade-site-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="g-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a8e9c"/><stop offset="1" stop-color="#5f6370"/></linearGradient>
+<linearGradient id="g-left" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2e3038"/><stop offset="1" stop-color="#1c1d24"/></linearGradient>
+<linearGradient id="g-right" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#454856"/><stop offset="1" stop-color="#30323d"/></linearGradient>
+<symbol id="lp-cube" viewBox="0 0 100 100"><polygon points="50,6 92,28 50,50 8,28" fill="url(#g-top)"/><polygon points="8,28 50,50 50,96 8,74" fill="url(#g-left)"/><polygon points="50,50 92,28 92,74 50,96" fill="url(#g-right)"/><polyline points="8,28 50,50 92,28" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="2" stroke-linejoin="round"/><polygon points="50,6 92,28 92,74 50,96 8,74 8,28" fill="none" stroke="#f4fffd" stroke-opacity=".92" stroke-width="2.6" stroke-linejoin="round"/></symbol>
+<symbol id="lp-tile" viewBox="0 0 60 36"><polygon points="2,15 30,29 30,35 2,21" fill="#c79a00"/><polygon points="30,29 58,15 58,21 30,35" fill="#e0b400"/><polygon points="30,1 58,15 30,29 2,15" fill="#ffe34d"/></symbol>
+<symbol id="lp-crystal" viewBox="0 0 60 72"><polygon points="30,3 5,58 30,70" fill="#d3bdf8"/><polygon points="30,3 55,58 30,70" fill="#a98bea"/><polygon points="30,32 18,60 42,60" fill="#3e3566"/><polygon points="30,32 18,60 30,64" fill="#54477f"/></symbol>
+<symbol id="ck" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" style="fill:var(--ck-bg,#2a2d48)"/><path d="M7.5 13.4l3.6 3.6 7.4-8" style="fill:none;stroke:var(--ck-ink,#fff)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="ck-chip" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8" fill="currentColor" opacity=".22"/><path d="M4.6 8.3l2.3 2.3 4.6-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs>
+</svg>
+<header class="band">
+<div class="wrap topbar">
+<a class="brand" href="index.html" aria-label="Leapline home"><span class="mark"><img src="../media/leapline/icon-256.png" alt="" width="88" height="88"></span><span class="wm-leapline"><span class="t1">LEAP</span><span class="t2">LINE</span></span></a>
+<nav class="nav" aria-label="Leapline"><a href="index.html" aria-current="page">Overview</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+<button class="theme-btn" type="button" data-theme-toggle aria-label="Colour theme"></button>
+</div>
+<div class="wrap hero">
+<div class="hero-copy">
+<p class="eyebrow">Arcade &middot; iPhone and iPad</p>
+<h1 class="display" aria-label="Leapline"><span class="wm-leapline"><span class="t1">LEAP</span><span class="t2">LINE</span></span></h1>
+<p class="subtitle">Tap to hop. Hold to fly.</p>
+<p class="pitch">A one-thumb arcade game about timing. Your cube runs the dotted line on its own. You decide when it leaves the ground.</p>
+<div class="cta-row"><a class="hero-2nd" href="support.html">How to play&nbsp;&rarr;</a></div>
+<p class="store-note"><svg viewBox="0 0 16 24" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="21" rx="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 19h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Coming soon to the App Store for iPhone and iPad</span></p>
+<ul class="chips" aria-label="At a glance"><li><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#ck-chip"/></svg>Free</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#ck-chip"/></svg>No ads</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#ck-chip"/></svg>No in-app purchases</li><li><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#ck-chip"/></svg>Works offline</li></ul>
+</div>
+<div class="hero-art">
+<div class="screen"><img src="../assets/leapline/gameplay.jpg" alt="Leapline gameplay: a cube on a dotted track between yellow tiles, mint towers and purple crystal portals, score 8." width="780" height="1688" fetchpriority="high"></div>
+<img class="tower" src="../assets/leapline/tower.png" alt="" width="136" height="325"><svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#lp-cube"/></svg>
+<p class="screen-cap">Real gameplay</p>
+</div>
+</div>
+<div class="line" aria-hidden="true"><svg class="tile" style="left:18%" viewBox="0 0 60 36" aria-hidden="true"><use href="#lp-tile"/></svg><svg class="tile" style="left:63%" viewBox="0 0 60 36" aria-hidden="true"><use href="#lp-tile"/></svg><svg class="tile" style="left:86%" viewBox="0 0 60 36" aria-hidden="true"><use href="#lp-tile"/></svg></div>
+</header>
+<main id="main">
+<section class="section" aria-labelledby="how-h">
+<div class="wrap">
+<div class="section-head"><p class="eyebrow">How it plays</p><h2 id="how-h">One line. Two moves.</h2><p>The cube runs the track by itself. Your job is timing, and the track gets faster every loop.</p></div>
+<ul class="features"><li class="feature"><span class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 50 C 18 14, 40 14, 52 40" fill="none" stroke="#f7d774" stroke-width="3.2" stroke-dasharray="0.1 7" stroke-linecap="round"/><svg x="20" y="34" width="26" height="16" viewBox="0 0 60 36"><use href="#lp-tile"/></svg><svg x="22" y="4" width="22" height="22" viewBox="0 0 100 100"><use href="#lp-cube"/></svg></svg></span><h3>Tap to hop, hold to fly</h3><p>A tap clears a single yellow tile. Hold to float over a whole row. Press a split second early and the cube still jumps the moment it lands.</p></li><li class="feature"><span class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><svg x="12" y="4" width="40" height="48" viewBox="0 0 60 72"><use href="#lp-crystal"/></svg><circle cx="14" cy="58" r="2.6" fill="#f7d774"/><circle cx="24" cy="58" r="2.6" fill="#f7d774"/><circle cx="40" cy="58" r="2.6" fill="#f7d774"/><circle cx="50" cy="58" r="2.6" fill="#f7d774"/></svg></span><h3>A hand-built track with portals</h3><p>8 hand-built sections of towers, crystals and coin trails. Portals warp you to a different exit, and every loop runs faster.</p></li><li class="feature"><span class="ic"><svg viewBox="0 0 64 64" aria-hidden="true"><svg x="4" y="10" width="34" height="34" viewBox="0 0 100 100"><use href="#lp-cube"/></svg><g transform="translate(40 26)"><ellipse cx="9" cy="24" rx="9" ry="4" fill="#c79a00"/><rect x="0" y="16" width="18" height="8" fill="#c79a00"/><ellipse cx="9" cy="16" rx="9" ry="4" fill="#ffd84a"/><ellipse cx="9" cy="14" rx="9" ry="4" fill="#c79a00"/><rect x="0" y="6" width="18" height="8" fill="#c79a00"/><ellipse cx="9" cy="6" rx="9" ry="4" fill="#ffe34d"/></g></svg></span><h3>Coins unlock cubes</h3><p>Collect coins along the line and spend them on 6 more cubes to ride. Every one is earned by playing.</p></li></ul>
+</div>
+</section>
+<section class="section" aria-labelledby="pure-h">
+<div class="wrap"><div class="promise">
+<div><h2 id="pure-h">A pure game.</h2><p>No pop-ups between runs, nothing to buy and nothing to sign up for. Every tile on every route can be cleared at every speed, so when you miss, you know why.</p></div>
+<ul class="checks"><li><svg viewBox="0 0 26 26" aria-hidden="true"><use href="#ck"/></svg>Free download</li><li><svg viewBox="0 0 26 26" aria-hidden="true"><use href="#ck"/></svg>No ads, ever</li><li><svg viewBox="0 0 26 26" aria-hidden="true"><use href="#ck"/></svg>No in-app purchases</li><li><svg viewBox="0 0 26 26" aria-hidden="true"><use href="#ck"/></svg>No account needed</li><li><svg viewBox="0 0 26 26" aria-hidden="true"><use href="#ck"/></svg>Works offline</li><li><svg viewBox="0 0 26 26" aria-hidden="true"><use href="#ck"/></svg>Data not collected</li></ul>
+</div></div>
+</section>
+<section class="section" aria-labelledby="shots-h">
+<div class="wrap">
+<div class="section-head"><p class="eyebrow">Screenshots</p><h2 id="shots-h">Towers, crystals and coin trails.</h2></div>
+<div class="shots-scroll"><ul class="shots"><li class="shot"><img src="../media/leapline/screenshot-1.jpg" alt="Leapline screenshot 1" width="645" height="1398" loading="lazy" decoding="async"></li><li class="shot"><img src="../media/leapline/screenshot-2.jpg" alt="Leapline screenshot 2" width="645" height="1398" loading="lazy" decoding="async"></li><li class="shot"><img src="../media/leapline/screenshot-3.jpg" alt="Leapline screenshot 3" width="645" height="1398" loading="lazy" decoding="async"></li><li class="shot"><img src="../media/leapline/screenshot-4.jpg" alt="Leapline screenshot 4" width="645" height="1398" loading="lazy" decoding="async"></li><li class="shot"><img src="../media/leapline/screenshot-5.jpg" alt="Leapline screenshot 5" width="645" height="1398" loading="lazy" decoding="async"></li><li class="shot"><img src="../media/leapline/screenshot-6.jpg" alt="Leapline screenshot 6" width="645" height="1398" loading="lazy" decoding="async"></li></ul></div>
+</div>
+</section>
+</main>
+<section class="band" aria-labelledby="closer-h">
+<div class="wrap closer">
+<div><h2 id="closer-h">One more run?</h2><p>Free, with no ads, no purchases and no account. Coming soon to the App Store for iPhone and iPad.</p></div>
+<div class="closer-cta"><p class="cta-row"><a class="text-link" href="support.html">Support</a><a class="text-link" href="privacy.html">Privacy</a></p></div>
+</div>
+<div class="line line--sm" aria-hidden="true"><svg class="tile" style="left:18%" viewBox="0 0 60 36" aria-hidden="true"><use href="#lp-tile"/></svg><svg class="tile" style="left:63%" viewBox="0 0 60 36" aria-hidden="true"><use href="#lp-tile"/></svg><svg class="tile" style="left:86%" viewBox="0 0 60 36" aria-hidden="true"><use href="#lp-tile"/></svg></div>
+</section>
+<footer class="footer">
+<div class="wrap">
+<div class="footer-grid">
+<div><h2>More games</h2><ul><li><a class="more" href="../avoid-me/index.html"><span class="mk"><img src="../media/avoid-me/icon-256.png" alt="" width="88" height="88"></span><span>Avoid Me<small>Dodge. Lure. Survive.</small></span></a></li><li><a class="more" href="../chomp-drop/index.html"><span class="mk"><img src="../media/chomp-drop/icon-256.png" alt="" width="88" height="88"></span><span>Chomp Drop<small>Munch cubes. Dodge the bars.</small></span></a></li></ul></div>
+<div><h2>Leapline</h2><ul>
+<li><a href="index.html">Overview</a></li>
+<li><a href="support.html">How to play and support</a></li>
+<li><a href="privacy.html">Privacy policy</a></li>
+</ul></div>
+<div><h2>Contact</h2><p class="muted-p">Questions, bugs or ideas? We read every message.</p>
+<p><a class="contact-link" href="support.html#contact">Contact support&nbsp;&rarr;</a></p></div>
+</div>
+<p class="fine"><span>&copy; 2026 &middot; Leapline is free, with no ads and no in-app purchases.</span><span>Coming soon to the App Store for iPhone and iPad.</span></p>
+</div>
+</footer>
+<script src="../assets/site.js"></script>
+</body>
+</html>
